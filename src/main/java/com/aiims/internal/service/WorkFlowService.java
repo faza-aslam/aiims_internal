@@ -3,10 +3,14 @@
  */
 package com.aiims.internal.service;
 
+import java.util.List;
+
 /**
  * @author faza
  *
  */
-public class WorkFlowService implements IWorkFlowService{
+public interface WorkFlowService {
+
+	List<String> fetchListOfHospitals();
 
 }
