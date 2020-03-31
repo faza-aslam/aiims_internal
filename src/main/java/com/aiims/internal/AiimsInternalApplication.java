@@ -8,6 +8,7 @@ public class AiimsInternalApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(AiimsInternalApplication.class, args);
+		
 	}
 
 }

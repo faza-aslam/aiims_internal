@@ -13,7 +13,9 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
@@ -25,12 +27,11 @@ import lombok.ToString;
 @Getter
 @Setter
 @ToString
-@Table(name="hospital")
-public class Hospital implements Serializable{
+@Table(name="person-detail")
+@NoArgsConstructor
+@AllArgsConstructor
+public class PersonDetails implements Serializable{
 	
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 1L;
 
 	@Id
@@ -39,7 +40,19 @@ public class Hospital implements Serializable{
     @Column(name = "id")
 	private Integer id;
 	
-	@Column(name = "name")
-	private String name;
+    @Column(name = "first_name", length = 100)
+    private String firstName;
+    
+    @Column(name = "last_name", length = 100)
+    private String lastName;
 
+    @Column(name = "address", length = 1000)
+    private String address;
+    
+    @Column(name = "contact_number", length = 12)
+    private Integer contactNumber;
+    
+  
+    
+    
 }

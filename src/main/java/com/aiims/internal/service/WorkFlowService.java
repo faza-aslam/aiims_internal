@@ -3,7 +3,7 @@
  */
 package com.aiims.internal.service;
 
-import java.util.List;
+import com.aiims.internal.model.request.RequestDto;
 
 /**
  * @author faza
@@ -11,6 +11,6 @@ import java.util.List;
  */
 public interface WorkFlowService {
 
-	List<String> fetchListOfHospitals();
+	String createContact(RequestDto request);
 
 }
